@@ -6,7 +6,7 @@ source "$CURRENT_DIR/.envs"
 # get front end list
 tmux_fzf_menu_origin=$TMUX_FZF_MENU
 front_end_list=$(echo -e "$tmux_fzf_menu_origin" | head -1)$'\n'
-tmux_fzf_menu_origin=$(echo -e "$tmux_fzf_menu_origin" | tail -n +3)
+tmux_fzf_menu_origin=$(echo -e "$tmux_fzf_menu_origin" | tail -n +3)$'\n'
 while [ $(echo -ne "$tmux_fzf_menu_origin" | wc -l) -ge 2 ]; do
     front_end_list+=$(echo "$tmux_fzf_menu_origin" | head -1)$'\n'
     tmux_fzf_menu_origin=$(echo "$tmux_fzf_menu_origin" | tail -n +3)$'\n'
